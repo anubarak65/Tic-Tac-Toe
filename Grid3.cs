@@ -385,5 +385,503 @@ namespace TicTacToe
             b8.Enabled = true;
             b9.Enabled = true;
         }
+        //AI Section
+        /* 
+         * AI Logic: 
+         * First move to check if he can win
+         * Second move if he can lose (to prevent it)
+         * If center is not taken player two can be put in a situation that
+         * player one has two wining oves so third move is to check for center.
+         * Else take corner
+         */
+        private void aiMove()
+        {
+            if(checkAIWin() == false)
+            {
+                if(checkAILose() == false)
+                {
+                    if(checkAICenter() == false)
+                    {
+                        if(checkAICorner() == false)
+                        {
+                            choseRemaining();
+                        }
+                    }
+                }
+            }
+        }
+        private bool checkAIWin()
+        {
+            //section 1.1
+            if (b1.Text == b2.Text && b3.Text == "")
+            {
+                if (b1.Text == "O")
+                {
+                    b3.PerformClick();
+                    return true;
+                }
+            }
+            if (b1.Text == b3.Text && b2.Text == "")
+            {
+                if (b1.Text == "O")
+                {
+                    b2.PerformClick();
+                    return true;
+                }
+            }
+            if (b3.Text == b2.Text && b1.Text == "")
+            {
+                if (b3.Text == "O")
+                {
+                    b1.PerformClick();
+                    return true;
+                }
+            }
+            // section 2.1
+            if (b4.Text == b5.Text && b6.Text == "")
+            {
+                if (b4.Text == "O")
+                {
+                    b6.PerformClick();
+                    return true;
+                }
+            }
+            if (b4.Text == b6.Text && b5.Text == "")
+            {
+                if (b4.Text == "O")
+                {
+                    b5.PerformClick();
+                    return true;
+                }
+            }
+            if (b5.Text == b6.Text && b4.Text == "")
+            {
+                if (b5.Text == "O")
+                {
+                    b4.PerformClick();
+                    return true;
+                }
+            }
+            //section 3.1
+            if (b7.Text == b8.Text && b9.Text == "")
+            {
+                if (b6.Text == "O")
+                {
+                    b9.PerformClick();
+                    return true;
+                }
+            }
+            if (b7.Text == b9.Text && b8.Text == "")
+            {
+                if (b7.Text == "O")
+                {
+                    b8.PerformClick();
+                    return true;
+                }
+            }
+            if (b8.Text == b9.Text && b7.Text == "")
+            {
+                if (b8.Text == "O")
+                {
+                    b7.PerformClick();
+                    return true;
+                }
+            }
+            //section 1.2
+            if (b1.Text == b4.Text && b7.Text == "")
+            {
+                if (b1.Text == "O")
+                {
+                    b7.PerformClick();
+                    return true;
+                }
+            }
+            if (b1.Text == b7.Text && b4.Text == "")
+            {
+                if (b1.Text == "O")
+                {
+                    b4.PerformClick();
+                    return true;
+                }
+            }
+            if (b4.Text == b7.Text && b1.Text == "")
+            {
+                if (b4.Text == "O")
+                {
+                    b1.PerformClick();
+                    return true;
+                }
+            }
+            //section 2.2
+            if (b2.Text == b5.Text && b8.Text == "")
+            {
+                if (b2.Text == "O")
+                {
+                    b8.PerformClick();
+                    return true;
+                }
+            }
+            if (b2.Text == b8.Text && b5.Text == "")
+            {
+                if (b2.Text == "O")
+                {
+                    b5.PerformClick();
+                    return true;
+                }
+            }
+            if (b5.Text == b8.Text && b2.Text == "")
+            {
+                if (b5.Text == "O")
+                {
+                    b2.PerformClick();
+                    return true;
+                }
+            }
+            // section 3.2
+            if (b3.Text == b6.Text && b9.Text == "")
+            {
+                if (b3.Text == "O")
+                {
+                    b9.PerformClick();
+                    return true;
+                }
+            }
+            if (b3.Text == b9.Text && b6.Text == "")
+            {
+                if (b3.Text == "O")
+                {
+                    b6.PerformClick();
+                    return true;
+                }
+            }
+            if (b6.Text == b9.Text && b3.Text == "")
+            {
+                if (b6.Text == "O")
+                {
+                    b3.PerformClick();
+                    return true;
+                }
+            }
+            // secton 1.2.3
+            if (b1.Text == b5.Text && b9.Text == "")
+            {
+                if (b1.Text == "O")
+                {
+                    b9.PerformClick();
+                    return true;
+                }
+            }
+            if (b5.Text == b9.Text && b1.Text == "")
+            {
+                if (b5.Text == "O")
+                {
+                    b1.PerformClick();
+                    return true;
+                }
+            }
+            if (b1.Text == b9.Text && b5.Text == "")
+            {
+                if (b1.Text == "O")
+                {
+                    b5.PerformClick();
+                    return true;
+                }
+            }
+            // section 3.2.1
+            if (b3.Text == b5.Text && b7.Text == "")
+            {
+                if (b3.Text == "O")
+                {
+                    b7.PerformClick();
+                    return true;
+                }
+            }
+            if (b5.Text == b7.Text && b3.Text == "")
+            {
+                if (b5.Text == "O")
+                {
+                    b3.PerformClick();
+                    return true;
+                }
+            }
+            if (b3.Text == b7.Text && b5.Text == "")
+            {
+                if (b3.Text == "O")
+                {
+                    b5.PerformClick();
+                    return true;
+                }
+            }
+
+            return false;
+            
+        }
+        private bool checkAILose()
+        {
+
+            {
+                //section 1.1
+                if (b1.Text == b2.Text && b3.Text == "")
+                {
+                    if (b1.Text == "X")
+                    {
+                        b3.PerformClick();
+                        return true;
+                    }
+                }
+                if (b1.Text == b3.Text && b2.Text == "")
+                {
+                    if (b1.Text == "X")
+                    {
+                        b2.PerformClick();
+                        return true;
+                    }
+                }
+                if (b3.Text == b2.Text && b1.Text == "")
+                {
+                    if (b3.Text == "X")
+                    {
+                        b1.PerformClick();
+                        return true;
+                    }
+                }
+                // section 2.1
+                if (b4.Text == b5.Text && b6.Text == "")
+                {
+                    if (b4.Text == "X")
+                    {
+                        b6.PerformClick();
+                        return true;
+                    }
+                }
+                if (b4.Text == b6.Text && b5.Text == "")
+                {
+                    if (b4.Text == "X")
+                    {
+                        b5.PerformClick();
+                        return true;
+                    }
+                }
+                if (b5.Text == b6.Text && b4.Text == "")
+                {
+                    if (b5.Text == "X")
+                    {
+                        b4.PerformClick();
+                        return true;
+                    }
+                }
+                //section 3.1
+                if (b7.Text == b8.Text && b9.Text == "")
+                {
+                    if (b6.Text == "X")
+                    {
+                        b9.PerformClick();
+                        return true;
+                    }
+                }
+                if (b7.Text == b9.Text && b8.Text == "")
+                {
+                    if (b7.Text == "X")
+                    {
+                        b8.PerformClick();
+                        return true;
+                    }
+                }
+                if (b8.Text == b9.Text && b7.Text == "")
+                {
+                    if (b8.Text == "X")
+                    {
+                        b7.PerformClick();
+                        return true;
+                    }
+                }
+                //section 1.2
+                if (b1.Text == b4.Text && b7.Text == "")
+                {
+                    if (b1.Text == "X")
+                    {
+                        b7.PerformClick();
+                        return true;
+                    }
+                }
+                if (b1.Text == b7.Text && b4.Text == "")
+                {
+                    if (b1.Text == "X")
+                    {
+                        b4.PerformClick();
+                        return true;
+                    }
+                }
+                if (b4.Text == b7.Text && b1.Text == "")
+                {
+                    if (b4.Text == "X")
+                    {
+                        b1.PerformClick();
+                        return true;
+                    }
+                }
+                //section 2.2
+                if (b2.Text == b5.Text && b8.Text == "")
+                {
+                    if (b2.Text == "X")
+                    {
+                        b8.PerformClick();
+                        return true;
+                    }
+                }
+                if (b2.Text == b8.Text && b5.Text == "")
+                {
+                    if (b2.Text == "X")
+                    {
+                        b5.PerformClick();
+                        return true;
+                    }
+                }
+                if (b5.Text == b8.Text && b2.Text == "")
+                {
+                    if (b5.Text == "X")
+                    {
+                        b2.PerformClick();
+                        return true;
+                    }
+                }
+                // section 3.2
+                if (b3.Text == b6.Text && b9.Text == "")
+                {
+                    if (b3.Text == "X")
+                    {
+                        b9.PerformClick();
+                        return true;
+                    }
+                }
+                if (b3.Text == b9.Text && b6.Text == "")
+                {
+                    if (b3.Text == "X")
+                    {
+                        b6.PerformClick();
+                        return true;
+                    }
+                }
+                if (b6.Text == b9.Text && b3.Text == "")
+                {
+                    if (b6.Text == "X")
+                    {
+                        b3.PerformClick();
+                        return true;
+                    }
+                }
+                // secton 1.2.3
+                if (b1.Text == b5.Text && b9.Text == "")
+                {
+                    if (b1.Text == "X")
+                    {
+                        b9.PerformClick();
+                        return true;
+                    }
+                }
+                if (b5.Text == b9.Text && b1.Text == "")
+                {
+                    if (b5.Text == "X")
+                    {
+                        b1.PerformClick();
+                        return true;
+                    }
+                }
+                if (b1.Text == b9.Text && b5.Text == "")
+                {
+                    if (b1.Text == "X")
+                    {
+                        b5.PerformClick();
+                        return true;
+                    }
+                }
+                // section 3.2.1
+                if (b3.Text == b5.Text && b7.Text == "")
+                {
+                    if (b3.Text == "X")
+                    {
+                        b7.PerformClick();
+                        return true;
+                    }
+                }
+                if (b5.Text == b7.Text && b3.Text == "")
+                {
+                    if (b5.Text == "X")
+                    {
+                        b3.PerformClick();
+                        return true;
+                    }
+                }
+                if (b3.Text == b7.Text && b5.Text == "")
+                {
+                    if (b3.Text == "X")
+                    {
+                        b5.PerformClick();
+                        return true;
+                    }
+                }
+
+                return false;
+
+            }
+        }
+        private bool checkAICenter()
+        {
+            if(b5.Text == "")
+            {
+                b5.PerformClick();
+                return true;
+            }
+            else 
+                return false;
+        }
+        private bool checkAICorner()
+        {
+            if(b1.Text == "")
+            {
+                b1.PerformClick();
+                return true;
+            }
+            if (b3.Text == "")
+            {
+                b3.PerformClick();
+                return true;
+            }
+            if (b7.Text == "")
+            {
+                b7.PerformClick();
+                return true;
+            }
+            if (b9.Text == "")
+            {
+                b9.PerformClick();
+                return true;
+            }
+            return false;
+        }
+        private bool choseRemaining()
+        {
+            if (b2.Text == "")
+            {
+                b2.PerformClick();
+                return true;
+            }
+            if(b4.Text == "")
+            {
+                b4.PerformClick();
+                return true;
+            }
+            if (b6.Text == "")
+            {
+                b6.PerformClick();
+                return true;
+            }
+            if (b8.Text == "")
+            {
+                b8.PerformClick();
+                return true;
+            }
+            return false;
+        }
     }
 }
