@@ -39,6 +39,7 @@ namespace TicTacToe
 
             b1.Enabled = false;
             changeTurn();
+            checkWin();
         }
 
         private void b2_Click(object sender, EventArgs e)
@@ -50,6 +51,7 @@ namespace TicTacToe
 
             b2.Enabled = false;
             changeTurn();
+            checkWin();
         }
 
         private void b3_Click(object sender, EventArgs e)
@@ -61,6 +63,7 @@ namespace TicTacToe
 
             b3.Enabled = false;
             changeTurn();
+            checkWin();
         }
 
         private void b4_Click(object sender, EventArgs e)
@@ -72,6 +75,7 @@ namespace TicTacToe
 
             b4.Enabled = false;
             changeTurn();
+            checkWin();
         }
 
         private void b5_Click(object sender, EventArgs e)
@@ -83,6 +87,7 @@ namespace TicTacToe
 
             b5.Enabled = false;
             changeTurn();
+            checkWin();
         }
 
         private void b6_Click(object sender, EventArgs e)
@@ -94,6 +99,7 @@ namespace TicTacToe
 
             b6.Enabled = false;
             changeTurn();
+            checkWin();
         }
 
         private void b7_Click(object sender, EventArgs e)
@@ -105,6 +111,7 @@ namespace TicTacToe
 
             b7.Enabled = false;
             changeTurn();
+            checkWin();
         }
 
         private void b8_Click(object sender, EventArgs e)
@@ -116,6 +123,7 @@ namespace TicTacToe
 
             b8.Enabled = false;
             changeTurn();
+            checkWin();
         }
 
         private void b9_Click(object sender, EventArgs e)
@@ -125,13 +133,199 @@ namespace TicTacToe
             else
                 b9.Text = "O";
 
+            
             b9.Enabled = false;
             changeTurn();
+            checkWin();
         }
         //a method to check if the game has ended 
         private void checkWin()
         {
+            if (b1.Text != "" && b2.Text != "" && b3.Text != "")
+            {
+                if (b1.Text == b2.Text && b1.Text == b3.Text)
+                {
+                    b1.BackColor = Color.Green;
+                    b1.ForeColor = Color.White;
+                    b2.BackColor = Color.Green;
+                    b2.ForeColor = Color.White;
+                    b3.BackColor = Color.Green;
+                    b3.ForeColor = Color.White;
+                    if (b1.Text == "X")
+                    {
+                        MessageBox.Show("You Win!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Computer Wins!");
+                    }
+                    clearGame();
 
+                }
+            }
+            if (b4.Text != "" && b5.Text != "" && b6.Text != "")
+            {
+                if (b4.Text == b5.Text && b4.Text == b6.Text)
+                {
+                    b4.BackColor = Color.Green;
+                    b4.ForeColor = Color.White;
+                    b5.BackColor = Color.Green;
+                    b5.ForeColor = Color.White;
+                    b6.BackColor = Color.Green;
+                    b6.ForeColor = Color.White;
+                    if (b4.Text == "X")
+                    {
+                        MessageBox.Show("You Win!");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Computer Wins!");
+
+                    }
+                    clearGame();
+                }
+            }
+            if (b7.Text != "" && b8.Text != "" && b9.Text != "")
+            {
+                if (b7.Text == b8.Text && b7.Text == b9.Text)
+                {
+                    b7.BackColor = Color.Green;
+                    b7.ForeColor = Color.White;
+                    b8.BackColor = Color.Green;
+                    b8.ForeColor = Color.White;
+                    b9.BackColor = Color.Green;
+                    b9.ForeColor = Color.White;
+                    if (b7.Text == "X")
+                    {
+                        MessageBox.Show("You Win!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Computer Wins!");
+
+                    }
+                    clearGame();
+                }
+            }
+            if (b1.Text != "" && b4.Text != "" && b7.Text != "")
+            {
+                if (b1.Text == b4.Text && b1.Text == b7.Text)
+                {
+                    b1.BackColor = Color.Green;
+                    b1.ForeColor = Color.White;
+                    b4.BackColor = Color.Green;
+                    b4.ForeColor = Color.White;
+                    b7.BackColor = Color.Green;
+                    b7.ForeColor = Color.White;
+                    if (b1.Text == "X")
+                    {
+                        MessageBox.Show("You Win!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Computer Wins!");
+
+                    }
+                    clearGame();
+                }
+            }
+            if (b2.Text != "" && b5.Text != "" && b8.Text != "")
+            {
+                if (b2.Text == b5.Text && b2.Text == b8.Text)
+                {
+                    b2.BackColor = Color.Green;
+                    b2.ForeColor = Color.White;
+                    b5.BackColor = Color.Green;
+                    b5.ForeColor = Color.White;
+                    b8.BackColor = Color.Green;
+                    b8.ForeColor = Color.White;
+                    if (b2.Text == "X")
+                    {
+                        MessageBox.Show("You Win!");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Computer Wins!");
+
+                    }
+                    clearGame();
+                }
+            }
+            if (b3.Text != "" && b6.Text != "" && b9.Text != "")
+            {
+                if (b3.Text == b6.Text && b3.Text == b9.Text)
+                {
+                    b3.BackColor = Color.Green;
+                    b3.ForeColor = Color.White;
+                    b6.BackColor = Color.Green;
+                    b6.ForeColor = Color.White;
+                    b9.BackColor = Color.Green;
+                    b9.ForeColor = Color.White;
+                    if (b3.Text == "X")
+                    {
+                        MessageBox.Show("You Win!");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Computer Wins!");
+
+                    }
+                    clearGame();
+                }
+            }
+            if (b1.Text != "" && b5.Text != "" && b9.Text != "")
+            {
+                if (b1.Text == b5.Text && b1.Text == b9.Text)
+                {
+                    b1.BackColor = Color.Green;
+                    b1.ForeColor = Color.White;
+                    b5.BackColor = Color.Green;
+                    b5.ForeColor = Color.White;
+                    b9.BackColor = Color.Green;
+                    b9.ForeColor = Color.White;
+                    if (b1.Text == "X")
+                    {
+                        MessageBox.Show("You Wins!");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Compuetr Wins!");
+
+                    }
+                    clearGame();
+                }
+            }
+            if (b3.Text != "" && b5.Text != "" && b7.Text != "")
+            {
+                if (b3.Text == b5.Text && b3.Text == b7.Text)
+                {
+                    b3.BackColor = Color.Green;
+                    b3.ForeColor = Color.White;
+                    b5.BackColor = Color.Green;
+                    b5.ForeColor = Color.White;
+                    b7.BackColor = Color.Green;
+                    b7.ForeColor = Color.White;
+                    if (b3.Text == "X")
+                    {
+                        MessageBox.Show("You Win!");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Compuetr Wins!");
+
+                    }
+                    clearGame();
+                }
+            }
+        }
+        private void clearGame()
+        {
+            
         }
     }
 }
