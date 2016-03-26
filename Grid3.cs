@@ -322,10 +322,68 @@ namespace TicTacToe
                     clearGame();
                 }
             }
+             if (b1.Text != "" && b2.Text != "" && b3.Text != "" && 
+                 b4.Text != "" && b5.Text != "" && b6.Text != "" &&
+                 b7.Text != "" && b8.Text != "" && b9.Text != "")
+             {
+                 MessageBox.Show("Draw!");
+                 clearGame();
+             }
+
         }
+        // a method to reset the game after a plater has won
         private void clearGame()
         {
-            
+            //reset turn back to 1 so 'X' always starts
+            turn = 1;
+
+            b1.Text = "";
+            b2.Text = "";
+            b3.Text = "";
+            b4.Text = "";
+            b5.Text = "";
+            b6.Text = "";
+            b7.Text = "";
+            b8.Text = "";
+            b9.Text = "";
+
+            b1.BackColor = Color.Empty;
+            b1.ForeColor = Color.Black;
+            b1.UseVisualStyleBackColor = true;
+            b2.BackColor = Color.Empty;
+            b2.ForeColor = Color.Black;
+            b2.UseVisualStyleBackColor = true;
+            b3.BackColor = Color.Empty;
+            b3.ForeColor = Color.Black;
+            b3.UseVisualStyleBackColor = true;
+            b4.BackColor = Color.Empty;
+            b4.ForeColor = Color.Black;
+            b4.UseVisualStyleBackColor = true;
+            b5.BackColor = Color.Empty;
+            b5.ForeColor = Color.Black;
+            b5.UseVisualStyleBackColor = true;
+            b6.BackColor = Color.Empty;
+            b6.ForeColor = Color.Black;
+            b6.UseVisualStyleBackColor = true;
+            b7.BackColor = Color.Empty;
+            b7.ForeColor = Color.Black;
+            b7.UseVisualStyleBackColor = true;
+            b8.BackColor = Color.Empty;
+            b8.ForeColor = Color.Black;
+            b8.UseVisualStyleBackColor = true;
+            b9.BackColor = Color.Empty;
+            b9.ForeColor = Color.Black;
+            b9.UseVisualStyleBackColor = true;
+
+            b1.Enabled = true;
+            b2.Enabled = true;
+            b3.Enabled = true;
+            b4.Enabled = true;
+            b5.Enabled = true;
+            b6.Enabled = true;
+            b7.Enabled = true;
+            b8.Enabled = true;
+            b9.Enabled = true;
         }
     }
 }
