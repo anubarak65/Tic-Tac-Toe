@@ -17,6 +17,7 @@ namespace TicTacToe
          *'X' alwasys starts first
          */
         private int turn = 1;
+        private int noTurn = 0;
 
         public Grid3()
         {
@@ -25,6 +26,7 @@ namespace TicTacToe
         // a method to change the players turn
         private void changeTurn()
         {
+            noTurn++;
             if (turn == 1)
                 turn = 0;
             else
@@ -345,6 +347,7 @@ namespace TicTacToe
         {
             //reset turn back to 1 so 'X' always starts
             turn = 1;
+            noTurn = 0;
 
             b1.Text = "";
             b2.Text = "";
@@ -411,13 +414,11 @@ namespace TicTacToe
                 {
                     if (checkAILose() == false)
                     {
-                        if (checkAICenter() == false)
-                        {
-                            if (checkAICorner() == false)
+                            if (checkAICenter() == false)
                             {
-                                choseRemaining();
+                                if (checkAICorner() == false)
+                                    choseRemaining();
                             }
-                        }
                     }
                 }
             }
@@ -849,6 +850,8 @@ namespace TicTacToe
         }
         private bool checkAICorner()
         {
+            if ((b1.Text == "X" && b9.Text == "X") || (b3.Text == "X" && b7.Text == "X"))
+               return false;
             if(b1.Text == "")
             {
                 b1.PerformClick();
@@ -895,5 +898,6 @@ namespace TicTacToe
             }
             return false;
         }
+       
     }
 }
