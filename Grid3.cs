@@ -40,6 +40,7 @@ namespace TicTacToe
             b1.Enabled = false;
             changeTurn();
             checkWin();
+            aiMove();
         }
 
         private void b2_Click(object sender, EventArgs e)
@@ -52,6 +53,7 @@ namespace TicTacToe
             b2.Enabled = false;
             changeTurn();
             checkWin();
+            aiMove();
         }
 
         private void b3_Click(object sender, EventArgs e)
@@ -64,6 +66,7 @@ namespace TicTacToe
             b3.Enabled = false;
             changeTurn();
             checkWin();
+            aiMove();
         }
 
         private void b4_Click(object sender, EventArgs e)
@@ -76,6 +79,7 @@ namespace TicTacToe
             b4.Enabled = false;
             changeTurn();
             checkWin();
+            aiMove();
         }
 
         private void b5_Click(object sender, EventArgs e)
@@ -88,6 +92,7 @@ namespace TicTacToe
             b5.Enabled = false;
             changeTurn();
             checkWin();
+            aiMove();
         }
 
         private void b6_Click(object sender, EventArgs e)
@@ -100,6 +105,7 @@ namespace TicTacToe
             b6.Enabled = false;
             changeTurn();
             checkWin();
+            aiMove();
         }
 
         private void b7_Click(object sender, EventArgs e)
@@ -112,6 +118,7 @@ namespace TicTacToe
             b7.Enabled = false;
             changeTurn();
             checkWin();
+            aiMove();
         }
 
         private void b8_Click(object sender, EventArgs e)
@@ -124,6 +131,7 @@ namespace TicTacToe
             b8.Enabled = false;
             changeTurn();
             checkWin();
+            aiMove();
         }
 
         private void b9_Click(object sender, EventArgs e)
@@ -137,6 +145,7 @@ namespace TicTacToe
             b9.Enabled = false;
             changeTurn();
             checkWin();
+            aiMove();
         }
         //a method to check if the game has ended 
         private void checkWin()
@@ -396,15 +405,18 @@ namespace TicTacToe
          */
         private void aiMove()
         {
-            if(checkAIWin() == false)
+            if (turn != 1)
             {
-                if(checkAILose() == false)
+                if (checkAIWin() == false)
                 {
-                    if(checkAICenter() == false)
+                    if (checkAILose() == false)
                     {
-                        if(checkAICorner() == false)
+                        if (checkAICenter() == false)
                         {
-                            choseRemaining();
+                            if (checkAICorner() == false)
+                            {
+                                choseRemaining();
+                            }
                         }
                     }
                 }
@@ -673,7 +685,7 @@ namespace TicTacToe
                 //section 3.1
                 if (b7.Text == b8.Text && b9.Text == "")
                 {
-                    if (b6.Text == "X")
+                    if (b7.Text == "X")
                     {
                         b9.PerformClick();
                         return true;
