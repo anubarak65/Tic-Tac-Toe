@@ -888,6 +888,10 @@ namespace TicTacToe
         {
             if ((b1.Text == "X" && b9.Text == "X") || (b3.Text == "X" && b7.Text == "X"))
                return false;
+            if (b8.Text == "X" && b3.Text == "X" && noTurn == 3)
+                return false;
+            if (b1.Text == "X" && b8.Text == "X" && noTurn == 3)
+                return false;
             if(b1.Text == "")
             {
                 b1.PerformClick();
@@ -912,6 +916,16 @@ namespace TicTacToe
         }
         private bool choseRemaining()
         {
+            if (b8.Text == "X" && b3.Text == "X" && noTurn == 3)
+            {
+                b9.PerformClick();
+                return true;
+            }
+            if (b1.Text == "X" && b8.Text == "X" && noTurn == 3)
+            {
+                b7.PerformClick();
+                return true;
+            }
             if (b2.Text == "")
             {
                 b2.PerformClick();
