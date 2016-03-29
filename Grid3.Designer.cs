@@ -37,6 +37,9 @@
             this.b7 = new System.Windows.Forms.Button();
             this.b8 = new System.Windows.Forms.Button();
             this.b9 = new System.Windows.Forms.Button();
+            this.playerScore = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cpScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // b1
@@ -129,11 +132,46 @@
             this.b9.UseVisualStyleBackColor = true;
             this.b9.Click += new System.EventHandler(this.b9_Click);
             // 
+            // playerScore
+            // 
+            this.playerScore.AutoSize = true;
+            this.playerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerScore.Location = new System.Drawing.Point(430, 288);
+            this.playerScore.Name = "playerScore";
+            this.playerScore.Size = new System.Drawing.Size(123, 24);
+            this.playerScore.TabIndex = 9;
+            this.playerScore.Text = "Player       = 0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(434, 247);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 26);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "SCORE";
+            // 
+            // cpScore
+            // 
+            this.cpScore.AutoSize = true;
+            this.cpScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpScore.Location = new System.Drawing.Point(430, 323);
+            this.cpScore.Name = "cpScore";
+            this.cpScore.Size = new System.Drawing.Size(124, 24);
+            this.cpScore.TabIndex = 11;
+            this.cpScore.Text = "Computer = 0";
+            // 
             // Grid3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 359);
+            this.ClientSize = new System.Drawing.Size(573, 359);
+            this.Controls.Add(this.cpScore);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.playerScore);
             this.Controls.Add(this.b9);
             this.Controls.Add(this.b8);
             this.Controls.Add(this.b7);
@@ -146,6 +184,7 @@
             this.Name = "Grid3";
             this.Text = "3X3 Grid";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -160,5 +199,8 @@
         private System.Windows.Forms.Button b7;
         private System.Windows.Forms.Button b8;
         private System.Windows.Forms.Button b9;
+        private System.Windows.Forms.Label playerScore;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label cpScore;
     }
 }
