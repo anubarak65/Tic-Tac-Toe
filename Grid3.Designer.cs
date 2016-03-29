@@ -40,6 +40,7 @@
             this.playerScore = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cpScore = new System.Windows.Forms.Label();
+            this.resetBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // b1
@@ -164,11 +165,24 @@
             this.cpScore.TabIndex = 11;
             this.cpScore.Text = "Computer = 0";
             // 
+            // resetBtn
+            // 
+            this.resetBtn.BackColor = System.Drawing.Color.Red;
+            this.resetBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resetBtn.Location = new System.Drawing.Point(434, 12);
+            this.resetBtn.Name = "resetBtn";
+            this.resetBtn.Size = new System.Drawing.Size(119, 33);
+            this.resetBtn.TabIndex = 12;
+            this.resetBtn.Text = "Reset";
+            this.resetBtn.UseVisualStyleBackColor = false;
+            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
+            // 
             // Grid3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 359);
+            this.Controls.Add(this.resetBtn);
             this.Controls.Add(this.cpScore);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.playerScore);
@@ -202,5 +216,6 @@
         private System.Windows.Forms.Label playerScore;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label cpScore;
+        private System.Windows.Forms.Button resetBtn;
     }
 }

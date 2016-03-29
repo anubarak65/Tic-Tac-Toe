@@ -155,6 +155,16 @@ namespace TicTacToe
             checkWin();
             aiMove();
         }
+        //a method to reset game and scorings
+        private void resetBtn_Click(object sender, EventArgs e)
+        {
+            clearGame();
+            player = 0;
+            cp = 0;
+            playerScore.Text = "Player       = " + player;
+            cpScore.Text = "Computer = " + cp;
+
+        }
         //a method to check if the game has ended 
         private void checkWin()
         {
@@ -923,7 +933,6 @@ namespace TicTacToe
                 return true;
             }
             return false;
-        }
-       
+        } 
     }
 }
