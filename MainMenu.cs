@@ -22,5 +22,11 @@ namespace TicTacToe
             Grid3 newGrid3 = new Grid3();
             newGrid3.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Grid5 newGrid5 = new Grid5();
+            newGrid5.Show();
+        }
     }
 }
