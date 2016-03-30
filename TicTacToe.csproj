@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -78,6 +78,12 @@
     <Compile Include="Grid3.Designer.cs">
       <DependentUpon>Grid3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Grid4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grid4.Designer.cs">
+      <DependentUpon>Grid4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Grid5.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Grid3.resx">
       <DependentUpon>Grid3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grid4.resx">
+      <DependentUpon>Grid4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Grid5.resx">
       <DependentUpon>Grid5.cs</DependentUpon>
