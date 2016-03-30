@@ -1899,9 +1899,6 @@ namespace TicTacToe
         } // done v1
         private bool checkAICorner()
         {
-            //chose another path if 5 in a row in blocked
-            if (b1.Text != "X" && b7.Text != "X" && b13.Text != "X" && b19.Text != "X" && b25.Text != "X")
-            {
                 if (b1.Text == "")
                 {
                     b1.PerformClick();
@@ -1922,10 +1919,9 @@ namespace TicTacToe
                     b19.PerformClick();
                     return true;
                 }
-            }
+            
             //chose another path if 5 in a row in blocked
-            if (b9.Text != "X" && b5.Text != "X" && b13.Text != "X" && b17.Text != "X" && b21.Text != "X")
-            {
+            
                 if (b9.Text == "")
                 {
                     b9.PerformClick();
@@ -1946,11 +1942,29 @@ namespace TicTacToe
                     b21.PerformClick();
                     return true;
                 }
-            }
+    
             return false;
         } // done v1
         private bool choseRemaining()
         {
+            if (b13.Text == "X" && b8.Text == "X" && b18.Text == "X" && (noTurn == 5 || noTurn == 6))
+            {
+                if (b19.Text == "")
+                {
+                    b19.PerformClick();
+                    return true;
+                }
+                if(b16.Text == "")
+                {
+                    b16.PerformClick();
+                        return true;
+                }
+                if(b3.Text == "")
+                {
+                    b3.PerformClick();
+                    return true;
+                }
+            }
             //chose another path if 5 in a row in blocked
             if (b1.Text != "X" && b6.Text != "X" && b11.Text != "X" && b16.Text != "X" && b21.Text != "X")
             {

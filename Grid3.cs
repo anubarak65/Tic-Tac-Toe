@@ -897,6 +897,11 @@ namespace TicTacToe
             if (b1.Text == "X" && b8.Text == "X" && noTurn == 3)
                 return false;
 
+            if(b6.Text == "X" && b8.Text == "X" && noTurn == 3)
+            {
+                b9.PerformClick();
+                return true;
+            }
             if(b1.Text == "")
             {
                 b1.PerformClick();
