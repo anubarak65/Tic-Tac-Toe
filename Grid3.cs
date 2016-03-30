@@ -14,13 +14,14 @@ namespace TicTacToe
     {
         /*an integer to determine the players turn.
          * 1 correspons to 'X' and 0 to 'O'
-         *'X' alwasys starts first
+         *in this game 'X' alwasys starts first
          */
         private int turn = 1;
+        //an integer for keeping track of number of turns
         private int noTurn = 0;
 
         /*
-         *Score variable for keeping track of wins  
+         *two integers for keeping track of number of wins  
          */
         private int player = 0;
         private int cp = 0;
@@ -29,7 +30,7 @@ namespace TicTacToe
         {
             InitializeComponent();
         }
-        // a method to change the players turn
+        // a method to change the players turn and count number of turns
         private void changeTurn()
         {
             noTurn++;
@@ -378,7 +379,7 @@ namespace TicTacToe
              }
 
         }
-        // a method to reset the game after a plater has won
+        // a method to clear the game after a player has won
         private void clearGame()
         {
             //reset turn back to 1 so 'X' always starts
@@ -436,11 +437,13 @@ namespace TicTacToe
         //AI Section
         /* 
          * AI Logic: 
-         * First move to check if he can win
-         * Second move if he can lose (to prevent it)
-         * If center is not taken player two can be put in a situation that
-         * player one has two wining oves so third move is to check for center.
+         * First move to check if the ai can win
+         * Second move if the ai can lose (to prevent it)
+         * If there is a configuration where the opponent can fork, you must block that fork
+         * (the ai cant create a fork itself because he does not have the first move)
+         * play the center if open.
          * Else take corner
+         * play in a middle square on any of the 4 sides
          */
         private void aiMove()
         {
@@ -886,12 +889,14 @@ namespace TicTacToe
         }
         private bool checkAICorner()
         {
+            // Blocking an opponent's fork
             if ((b1.Text == "X" && b9.Text == "X") || (b3.Text == "X" && b7.Text == "X"))
                return false;
             if (b8.Text == "X" && b3.Text == "X" && noTurn == 3)
                 return false;
             if (b1.Text == "X" && b8.Text == "X" && noTurn == 3)
                 return false;
+
             if(b1.Text == "")
             {
                 b1.PerformClick();
