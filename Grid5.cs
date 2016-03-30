@@ -22,6 +22,11 @@ namespace TicTacToe
          */
         private int turn = 1;
         private int noTurn = 0;
+        /*
+        *two integers for keeping track of number of wins  
+        */
+        private int player = 0;
+        private int cp = 0;
         // a method to change the players turn
         private void changeTurn()
         {
@@ -375,14 +380,14 @@ namespace TicTacToe
                     if (b1.Text == "X")
                     {
                         MessageBox.Show("You Win!");
-                       // player++;
-                       // playerScore.Text = "Player       = " + player;
+                        player++;
+                        playerScore.Text = "Player       = " + player;
                     }
                     else
                     {
                         MessageBox.Show("Computer Wins!");
-                        //cp++;
-                        //cpScore.Text = "Computer = " + cp;
+                        cp++;
+                        cpScore.Text = "Computer = " + cp;
                     }
                     clearGame();
 
@@ -405,14 +410,14 @@ namespace TicTacToe
                     if (b6.Text == "X")
                     {
                         MessageBox.Show("You Win!");
-                        //player++;
-                        //playerScore.Text = "Player       = " + player;
+                        player++;
+                        playerScore.Text = "Player       = " + player;
                     }
                     else
                     {
                         MessageBox.Show("Computer Wins!");
-                        //cp++;
-                        //cpScore.Text = "Computer = " + cp;
+                        cp++;
+                        cpScore.Text = "Computer = " + cp;
                     }
                     clearGame();
                 }
@@ -434,14 +439,14 @@ namespace TicTacToe
                     if (b11.Text == "X")
                     {
                         MessageBox.Show("You Win!");
-                        //player++;
-                        //playerScore.Text = "Player       = " + player;
+                        player++;
+                        playerScore.Text = "Player       = " + player;
                     }
                     else
                     {
                         MessageBox.Show("Computer Wins!");
-                        //cp++;
-                        //cpScore.Text = "Computer = " + cp;
+                        cp++;
+                        cpScore.Text = "Computer = " + cp;
                     }
                     clearGame();
                 }
@@ -463,14 +468,14 @@ namespace TicTacToe
                     if (b16.Text == "X")
                     {
                         MessageBox.Show("You Win!");
-                        //player++;
-                       // playerScore.Text = "Player       = " + player;
+                        player++;
+                        playerScore.Text = "Player       = " + player;
                     }
                     else
                     {
                         MessageBox.Show("Computer Wins!");
-                        //cp++;
-                        //cpScore.Text = "Computer = " + cp;
+                        cp++;
+                        cpScore.Text = "Computer = " + cp;
                     }
                     clearGame();
                 }
@@ -492,14 +497,14 @@ namespace TicTacToe
                     if (b21.Text == "X")
                     {
                         MessageBox.Show("You Win!");
-                        //player++;
-                        //playerScore.Text = "Player       = " + player;
+                        player++;
+                        playerScore.Text = "Player       = " + player;
                     }
                     else
                     {
                         MessageBox.Show("Computer Wins!");
-                        //cp++;
-                        //cpScore.Text = "Computer = " + cp;
+                        cp++;
+                        cpScore.Text = "Computer = " + cp;
                     }
                     clearGame();
                 }
@@ -521,14 +526,14 @@ namespace TicTacToe
                     if (b1.Text == "X")
                     {
                         MessageBox.Show("You Win!");
-                       // player++;
-                        //playerScore.Text = "Player       = " + player;
+                         player++;
+                         playerScore.Text = "Player       = " + player;
                     }
                     else
                     {
                         MessageBox.Show("Computer Wins!");
-                       // cp++;
-                        //cpScore.Text = "Computer = " + cp;
+                        cp++;
+                        cpScore.Text = "Computer = " + cp;
                     }
                     clearGame();
                 }
@@ -550,14 +555,14 @@ namespace TicTacToe
                     if (b2.Text == "X")
                     {
                         MessageBox.Show("You Win!");
-                        //player++;
-                        //playerScore.Text = "Player       = " + player;
+                        player++;
+                        playerScore.Text = "Player       = " + player;
                     }
                     else
                     {
                         MessageBox.Show("Computer Wins!");
-                        //cp++;
-                        //cpScore.Text = "Computer = " + cp;
+                        cp++;
+                        cpScore.Text = "Computer = " + cp;
                     }
                     clearGame();
                 }
@@ -580,14 +585,14 @@ namespace TicTacToe
                     if (b3.Text == "X")
                     {
                         MessageBox.Show("You Win!");
-                        //player++;
-                       // playerScore.Text = "Player       = " + player;
+                        player++;
+                       playerScore.Text = "Player       = " + player;
                     }
                     else
                     {
                         MessageBox.Show("Computer Wins!");
-                        //cp++;
-                       // cpScore.Text = "Computer = " + cp;
+                        cp++;
+                       cpScore.Text = "Computer = " + cp;
                     }
                     clearGame();
                 }
@@ -610,14 +615,14 @@ namespace TicTacToe
                     if (b4.Text == "X")
                     {
                         MessageBox.Show("You Win!");
-                        //player++;
-                        // playerScore.Text = "Player       = " + player;
+                        player++;
+                        playerScore.Text = "Player       = " + player;
                     }
                     else
                     {
                         MessageBox.Show("Computer Wins!");
-                        //cp++;
-                        // cpScore.Text = "Computer = " + cp;
+                        cp++;
+                        cpScore.Text = "Computer = " + cp;
                     }
                     clearGame();
                 }
@@ -640,14 +645,14 @@ namespace TicTacToe
                     if (b5.Text == "X")
                     {
                         MessageBox.Show("You Win!");
-                        //player++;
-                        // playerScore.Text = "Player       = " + player;
+                        player++;
+                        playerScore.Text = "Player       = " + player;
                     }
                     else
                     {
                         MessageBox.Show("Computer Wins!");
-                        //cp++;
-                        // cpScore.Text = "Computer = " + cp;
+                        cp++;
+                        cpScore.Text = "Computer = " + cp;
                     }
                     clearGame();
                 }
@@ -670,14 +675,14 @@ namespace TicTacToe
                     if (b1.Text == "X")
                     {
                         MessageBox.Show("You Win!");
-                        //player++;
-                        // playerScore.Text = "Player       = " + player;
+                        player++;
+                        playerScore.Text = "Player       = " + player;
                     }
                     else
                     {
                         MessageBox.Show("Computer Wins!");
-                        //cp++;
-                        // cpScore.Text = "Computer = " + cp;
+                        cp++;
+                        cpScore.Text = "Computer = " + cp;
                     }
                     clearGame();
                 }
@@ -692,22 +697,22 @@ namespace TicTacToe
                     b9.ForeColor = Color.White;
                     b13.BackColor = Color.Green;
                     b13.ForeColor = Color.White;
-                    b19.BackColor = Color.Green;
-                    b19.ForeColor = Color.White;
+                    b17.BackColor = Color.Green;
+                    b17.ForeColor = Color.White;
                     b21.BackColor = Color.Green;
                     b21.ForeColor = Color.White;
 
                     if (b5.Text == "X")
                     {
                         MessageBox.Show("You Win!");
-                        //player++;
-                        // playerScore.Text = "Player       = " + player;
+                        player++;
+                        playerScore.Text = "Player       = " + player;
                     }
                     else
                     {
                         MessageBox.Show("Computer Wins!");
-                        //cp++;
-                        // cpScore.Text = "Computer = " + cp;
+                        cp++;
+                        cpScore.Text = "Computer = " + cp;
                     }
                     clearGame();
                 }
@@ -2020,7 +2025,16 @@ namespace TicTacToe
                 return true;
             }
             return false;
-        }  // done v1
+        } // done v1
+
+        private void resetBtn_Click(object sender, EventArgs e)
+        {
+            clearGame();
+            player = 0;
+            cp = 0;
+            playerScore.Text = "Player       = " + player;
+            cpScore.Text = "Computer = " + cp;
+        }  
 
     }
 }

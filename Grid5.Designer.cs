@@ -53,6 +53,10 @@
             this.b23 = new System.Windows.Forms.Button();
             this.b22 = new System.Windows.Forms.Button();
             this.b21 = new System.Windows.Forms.Button();
+            this.resetBtn = new System.Windows.Forms.Button();
+            this.cpScore = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.playerScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // b1
@@ -280,11 +284,59 @@
             this.b21.UseVisualStyleBackColor = true;
             this.b21.Click += new System.EventHandler(this.b21_Click);
             // 
+            // resetBtn
+            // 
+            this.resetBtn.BackColor = System.Drawing.Color.Red;
+            this.resetBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resetBtn.Location = new System.Drawing.Point(292, 12);
+            this.resetBtn.Name = "resetBtn";
+            this.resetBtn.Size = new System.Drawing.Size(119, 33);
+            this.resetBtn.TabIndex = 28;
+            this.resetBtn.Text = "Reset";
+            this.resetBtn.UseVisualStyleBackColor = false;
+            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
+            // 
+            // cpScore
+            // 
+            this.cpScore.AutoSize = true;
+            this.cpScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpScore.Location = new System.Drawing.Point(292, 262);
+            this.cpScore.Name = "cpScore";
+            this.cpScore.Size = new System.Drawing.Size(124, 24);
+            this.cpScore.TabIndex = 27;
+            this.cpScore.Text = "Computer = 0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(292, 148);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 26);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "SCORE";
+            // 
+            // playerScore
+            // 
+            this.playerScore.AutoSize = true;
+            this.playerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerScore.Location = new System.Drawing.Point(288, 206);
+            this.playerScore.Name = "playerScore";
+            this.playerScore.Size = new System.Drawing.Size(123, 24);
+            this.playerScore.TabIndex = 25;
+            this.playerScore.Text = "Player       = 0";
+            // 
             // Grid5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 305);
+            this.ClientSize = new System.Drawing.Size(460, 296);
+            this.Controls.Add(this.resetBtn);
+            this.Controls.Add(this.cpScore);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.playerScore);
             this.Controls.Add(this.b21);
             this.Controls.Add(this.b22);
             this.Controls.Add(this.b23);
@@ -313,6 +365,7 @@
             this.Name = "Grid5";
             this.Text = "Grid5";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -343,5 +396,9 @@
         private System.Windows.Forms.Button b23;
         private System.Windows.Forms.Button b22;
         private System.Windows.Forms.Button b21;
+        private System.Windows.Forms.Button resetBtn;
+        private System.Windows.Forms.Label cpScore;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label playerScore;
     }
 }

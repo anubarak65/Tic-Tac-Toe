@@ -952,6 +952,21 @@ namespace TicTacToe
                 return true;
             }
             return false;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playerScore_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cpScore_Click(object sender, EventArgs e)
+        {
+
         } 
     }
 }
