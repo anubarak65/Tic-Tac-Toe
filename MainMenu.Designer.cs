@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -35,17 +36,23 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(77, 12);
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.Font = new System.Drawing.Font("Courier New", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(199, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 67);
             this.button1.TabIndex = 0;
             this.button1.Text = "3X3";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(77, 98);
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.Font = new System.Drawing.Font("Courier New", 22F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(199, 98);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 67);
             this.button2.TabIndex = 1;
@@ -55,7 +62,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(77, 183);
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.Font = new System.Drawing.Font("Courier New", 22F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(199, 183);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 67);
             this.button3.TabIndex = 2;
@@ -67,10 +76,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(501, 262);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu";
             this.Text = "Main Menu";
             this.ResumeLayout(false);

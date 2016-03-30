@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grid4));
             this.b1 = new System.Windows.Forms.Button();
             this.b2 = new System.Windows.Forms.Button();
             this.b4 = new System.Windows.Forms.Button();
@@ -178,6 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(350, 339);
             this.Controls.Add(this.b16);
             this.Controls.Add(this.b15);
@@ -195,8 +197,9 @@
             this.Controls.Add(this.b4);
             this.Controls.Add(this.b2);
             this.Controls.Add(this.b1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Grid4";
-            this.Text = "Grid4";
+            this.Text = "4X4 Grid";
             this.ResumeLayout(false);
 
         }

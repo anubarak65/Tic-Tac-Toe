@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grid3));
             this.b1 = new System.Windows.Forms.Button();
             this.b2 = new System.Windows.Forms.Button();
             this.b3 = new System.Windows.Forms.Button();
@@ -184,6 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(573, 359);
             this.Controls.Add(this.resetBtn);
             this.Controls.Add(this.cpScore);
@@ -198,6 +200,7 @@
             this.Controls.Add(this.b3);
             this.Controls.Add(this.b2);
             this.Controls.Add(this.b1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Grid3";
             this.Text = "3X3 Grid";
             this.ResumeLayout(false);

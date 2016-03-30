@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grid5));
             this.b1 = new System.Windows.Forms.Button();
             this.b5 = new System.Windows.Forms.Button();
             this.b4 = new System.Windows.Forms.Button();
@@ -322,7 +323,7 @@
             // 
             this.playerScore.AutoSize = true;
             this.playerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playerScore.Location = new System.Drawing.Point(288, 206);
+            this.playerScore.Location = new System.Drawing.Point(293, 206);
             this.playerScore.Name = "playerScore";
             this.playerScore.Size = new System.Drawing.Size(123, 24);
             this.playerScore.TabIndex = 25;
@@ -332,6 +333,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(460, 296);
             this.Controls.Add(this.resetBtn);
             this.Controls.Add(this.cpScore);
@@ -362,8 +364,9 @@
             this.Controls.Add(this.b4);
             this.Controls.Add(this.b5);
             this.Controls.Add(this.b1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Grid5";
-            this.Text = "Grid5";
+            this.Text = "5X5 Grid";
             this.ResumeLayout(false);
             this.PerformLayout();
 
