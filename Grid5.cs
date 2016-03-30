@@ -1899,51 +1899,339 @@ namespace TicTacToe
         } // done v1
         private bool checkAICorner()
         {
-            if (b1.Text == "")
+            //chose another path if 5 in a row in blocked
+            if (b1.Text != "X" && b7.Text != "X" && b13.Text != "X" && b19.Text != "X" && b25.Text != "X")
             {
-                b1.PerformClick();
-                return true;
+                if (b1.Text == "")
+                {
+                    b1.PerformClick();
+                    return true;
+                }
+                if (b25.Text == "")
+                {
+                    b25.PerformClick();
+                    return true;
+                }
+                if (b7.Text == "")
+                {
+                    b7.PerformClick();
+                    return true;
+                }
+                if (b19.Text == "")
+                {
+                    b19.PerformClick();
+                    return true;
+                }
             }
-            if (b5.Text == "")
+            //chose another path if 5 in a row in blocked
+            if (b9.Text != "X" && b5.Text != "X" && b13.Text != "X" && b17.Text != "X" && b21.Text != "X")
             {
-                b5.PerformClick();
-                return true;
-            }
-            if (b21.Text == "")
-            {
-                b21.PerformClick();
-                return true;
-            }
-            if (b25.Text == "")
-            {
-                b25.PerformClick();
-                return true;
-            }
-            //inner corner
-            if (b7.Text == "")
-            {
-                b7.PerformClick();
-                return true;
-            }
-            if (b9.Text == "")
-            {
-                b9.PerformClick();
-                return true;
-            }
-            if (b17.Text == "")
-            {
-                b17.PerformClick();
-                return true;
-            }
-            if (b19.Text == "")
-            {
-                b19.PerformClick();
-                return true;
+                if (b9.Text == "")
+                {
+                    b9.PerformClick();
+                    return true;
+                }
+                if (b17.Text == "")
+                {
+                    b17.PerformClick();
+                    return true;
+                }
+                if (b5.Text == "")
+                {
+                    b5.PerformClick();
+                    return true;
+                }
+                if (b21.Text == "")
+                {
+                    b21.PerformClick();
+                    return true;
+                }
             }
             return false;
         } // done v1
         private bool choseRemaining()
         {
+            //chose another path if 5 in a row in blocked
+            if (b1.Text != "X" && b6.Text != "X" && b11.Text != "X" && b16.Text != "X" && b21.Text != "X")
+            {
+                if (b1.Text == "")
+                {
+                    b1.PerformClick();
+                    return true;
+                }
+                if (b6.Text == "")
+                {
+                    b6.PerformClick();
+                    return true;
+                }
+                if (b11.Text == "")
+                {
+                    b11.PerformClick();
+                    return true;
+                }
+                if (b16.Text == "")
+                {
+                    b16.PerformClick();
+                    return true;
+                }
+                if (b21.Text == "")
+                {
+                    b21.PerformClick();
+                    return true;
+                }
+            }
+            //chose another path if 5 in a row in blocked
+            if (b2.Text != "X" && b7.Text != "X" && b12.Text != "X" && b17.Text != "X" && b22.Text != "X")
+            {
+                if (b2.Text == "")
+                {
+                    b2.PerformClick();
+                    return true;
+                }
+                if (b7.Text == "")
+                {
+                    b7.PerformClick();
+                    return true;
+                }
+                if (b12.Text == "")
+                {
+                    b12.PerformClick();
+                    return true;
+                }
+                if (b17.Text == "")
+                {
+                    b17.PerformClick();
+                    return true;
+                }
+                if (b22.Text == "")
+                {
+                    b22.PerformClick();
+                    return true;
+                }
+            }
+            //chose another path if 5 in a row in blocked
+            if (b3.Text != "X" && b8.Text != "X" && b13.Text != "X" && b18.Text != "X" && b23.Text != "X")
+            {
+                if (b3.Text == "")
+                {
+                    b3.PerformClick();
+                    return true;
+                }
+                if (b8.Text == "")
+                {
+                    b8.PerformClick();
+                    return true;
+                }
+                if (b18.Text == "")
+                {
+                    b18.PerformClick();
+                    return true;
+                }
+                if (b23.Text == "")
+                {
+                    b23.PerformClick();
+                    return true;
+                }
+            }
+            //chose another path if 5 in a row in blocked
+            if (b4.Text != "X" && b9.Text != "X" && b14.Text != "X" && b19.Text != "X" && b24.Text != "X")
+            {
+                if (b4.Text == "")
+                {
+                    b4.PerformClick();
+                    return true;
+                }
+                if (b9.Text == "")
+                {
+                    b9.PerformClick();
+                    return true;
+                }
+                if (b14.Text == "")
+                {
+                    b14.PerformClick();
+                    return true;
+                }
+                if (b19.Text == "")
+                {
+                    b19.PerformClick();
+                    return true;
+                }
+                if (b24.Text == "")
+                {
+                    b24.PerformClick();
+                    return true;
+                }
+            }
+            if (b5.Text != "X" && b10.Text != "X" && b15.Text != "X" && b20.Text != "X" && b25.Text != "X")
+            {
+                if (b5.Text == "")
+                {
+                    b5.PerformClick();
+                    return true;
+                }
+                if (b10.Text == "")
+                {
+                    b10.PerformClick();
+                    return true;
+                }
+                if (b15.Text == "")
+                {
+                    b15.PerformClick();
+                    return true;
+                }
+                if (b20.Text == "")
+                {
+                    b20.PerformClick();
+                    return true;
+                }
+                if (b25.Text == "")
+                {
+                    b25.PerformClick();
+                    return true;
+                }
+            }
+            //horizantal combinations
+            if (b1.Text != "X" && b2.Text != "X" && b3.Text != "X" && b4.Text != "X" && b5.Text != "X")
+            {
+                if (b1.Text == "")
+                {
+                    b1.PerformClick();
+                    return true;
+                }
+                if (b2.Text == "")
+                {
+                    b2.PerformClick();
+                    return true;
+                }
+                if (b3.Text == "")
+                {
+                    b3.PerformClick();
+                    return true;
+                }
+                if (b4.Text == "")
+                {
+                    b4.PerformClick();
+                    return true;
+                }
+                if (b5.Text == "")
+                {
+                    b5.PerformClick();
+                    return true;
+                }
+            }
+            if (b6.Text != "X" && b7.Text != "X" && b8.Text != "X" && b9.Text != "X" && b10.Text != "X")
+            {
+                if (b6.Text == "")
+                {
+                    b6.PerformClick();
+                    return true;
+                }
+                if (b8.Text == "")
+                {
+                    b8.PerformClick();
+                    return true;
+                }
+                if (b9.Text == "")
+                {
+                    b9.PerformClick();
+                    return true;
+                }
+                if (b10.Text == "")
+                {
+                    b10.PerformClick();
+                    return true;
+                }
+                if (b7.Text == "")
+                {
+                    b7.PerformClick();
+                    return true;
+                }
+            }
+            if (b11.Text != "X" && b12.Text != "X" && b13.Text != "X" && b14.Text != "X" && b15.Text != "X")
+            {
+                if (b11.Text == "")
+                {
+                    b11.PerformClick();
+                    return true;
+                }
+                if (b12.Text == "")
+                {
+                    b12.PerformClick();
+                    return true;
+                }
+                if (b13.Text == "")
+                {
+                    b13.PerformClick();
+                    return true;
+                }
+                if (b14.Text == "")
+                {
+                    b14.PerformClick();
+                    return true;
+                }
+                if (b15.Text == "")
+                {
+                    b15.PerformClick();
+                    return true;
+                }
+            }
+            if (b16.Text != "X" && b17.Text != "X" && b18.Text != "X" && b19.Text != "X" && b20.Text != "X")
+            {
+                if (b16.Text == "")
+                {
+                    b16.PerformClick();
+                    return true;
+                }
+                if (b17.Text == "")
+                {
+                    b17.PerformClick();
+                    return true;
+                }
+                if (b18.Text == "")
+                {
+                    b18.PerformClick();
+                    return true;
+                }
+                if (b19.Text == "")
+                {
+                    b19.PerformClick();
+                    return true;
+                }
+                if (b20.Text == "")
+                {
+                    b20.PerformClick();
+                    return true;
+                }
+            }
+            if (b21.Text != "X" && b22.Text != "X" && b23.Text != "X" && b24.Text != "X" && b25.Text != "X")
+            {
+                if (b21.Text == "")
+                {
+                    b21.PerformClick();
+                    return true;
+                }
+                if (b22.Text == "")
+                {
+                    b22.PerformClick();
+                    return true;
+                }
+                if (b23.Text == "")
+                {
+                    b23.PerformClick();
+                    return true;
+                }
+                if (b24.Text == "")
+                {
+                    b24.PerformClick();
+                    return true;
+                }
+                if (b25.Text == "")
+                {
+                    b25.PerformClick();
+                    return true;
+                }
+            }
+            //just fill up the rest (draw result)
             if (b2.Text == "")
             {
                 b2.PerformClick();
