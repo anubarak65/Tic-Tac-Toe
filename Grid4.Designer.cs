@@ -45,6 +45,10 @@
             this.b14 = new System.Windows.Forms.Button();
             this.b15 = new System.Windows.Forms.Button();
             this.b16 = new System.Windows.Forms.Button();
+            this.resetBtn = new System.Windows.Forms.Button();
+            this.cpScore = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.playerScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // b1
@@ -54,6 +58,7 @@
             this.b1.Size = new System.Drawing.Size(75, 75);
             this.b1.TabIndex = 0;
             this.b1.UseVisualStyleBackColor = true;
+            this.b1.Click += new System.EventHandler(this.b1_Click);
             // 
             // b2
             // 
@@ -62,6 +67,7 @@
             this.b2.Size = new System.Drawing.Size(75, 75);
             this.b2.TabIndex = 1;
             this.b2.UseVisualStyleBackColor = true;
+            this.b2.Click += new System.EventHandler(this.b2_Click);
             // 
             // b4
             // 
@@ -70,6 +76,7 @@
             this.b4.Size = new System.Drawing.Size(75, 75);
             this.b4.TabIndex = 2;
             this.b4.UseVisualStyleBackColor = true;
+            this.b4.Click += new System.EventHandler(this.b4_Click);
             // 
             // b3
             // 
@@ -78,6 +85,7 @@
             this.b3.Size = new System.Drawing.Size(75, 75);
             this.b3.TabIndex = 3;
             this.b3.UseVisualStyleBackColor = true;
+            this.b3.Click += new System.EventHandler(this.b3_Click);
             // 
             // b5
             // 
@@ -86,6 +94,7 @@
             this.b5.Size = new System.Drawing.Size(75, 75);
             this.b5.TabIndex = 4;
             this.b5.UseVisualStyleBackColor = true;
+            this.b5.Click += new System.EventHandler(this.b5_Click);
             // 
             // b6
             // 
@@ -94,6 +103,7 @@
             this.b6.Size = new System.Drawing.Size(75, 75);
             this.b6.TabIndex = 5;
             this.b6.UseVisualStyleBackColor = true;
+            this.b6.Click += new System.EventHandler(this.b6_Click);
             // 
             // b7
             // 
@@ -102,6 +112,7 @@
             this.b7.Size = new System.Drawing.Size(75, 75);
             this.b7.TabIndex = 6;
             this.b7.UseVisualStyleBackColor = true;
+            this.b7.Click += new System.EventHandler(this.b7_Click);
             // 
             // b8
             // 
@@ -110,6 +121,7 @@
             this.b8.Size = new System.Drawing.Size(75, 75);
             this.b8.TabIndex = 7;
             this.b8.UseVisualStyleBackColor = true;
+            this.b8.Click += new System.EventHandler(this.b8_Click);
             // 
             // b9
             // 
@@ -118,6 +130,7 @@
             this.b9.Size = new System.Drawing.Size(75, 75);
             this.b9.TabIndex = 8;
             this.b9.UseVisualStyleBackColor = true;
+            this.b9.Click += new System.EventHandler(this.b9_Click);
             // 
             // b10
             // 
@@ -126,6 +139,7 @@
             this.b10.Size = new System.Drawing.Size(75, 75);
             this.b10.TabIndex = 9;
             this.b10.UseVisualStyleBackColor = true;
+            this.b10.Click += new System.EventHandler(this.b10_Click);
             // 
             // b11
             // 
@@ -134,6 +148,7 @@
             this.b11.Size = new System.Drawing.Size(75, 75);
             this.b11.TabIndex = 10;
             this.b11.UseVisualStyleBackColor = true;
+            this.b11.Click += new System.EventHandler(this.b11_Click);
             // 
             // b12
             // 
@@ -142,6 +157,7 @@
             this.b12.Size = new System.Drawing.Size(75, 75);
             this.b12.TabIndex = 11;
             this.b12.UseVisualStyleBackColor = true;
+            this.b12.Click += new System.EventHandler(this.b12_Click);
             // 
             // b13
             // 
@@ -150,6 +166,7 @@
             this.b13.Size = new System.Drawing.Size(75, 75);
             this.b13.TabIndex = 12;
             this.b13.UseVisualStyleBackColor = true;
+            this.b13.Click += new System.EventHandler(this.b13_Click);
             // 
             // b14
             // 
@@ -158,6 +175,7 @@
             this.b14.Size = new System.Drawing.Size(75, 75);
             this.b14.TabIndex = 13;
             this.b14.UseVisualStyleBackColor = true;
+            this.b14.Click += new System.EventHandler(this.b14_Click);
             // 
             // b15
             // 
@@ -166,6 +184,7 @@
             this.b15.Size = new System.Drawing.Size(75, 75);
             this.b15.TabIndex = 14;
             this.b15.UseVisualStyleBackColor = true;
+            this.b15.Click += new System.EventHandler(this.b15_Click);
             // 
             // b16
             // 
@@ -174,13 +193,62 @@
             this.b16.Size = new System.Drawing.Size(75, 75);
             this.b16.TabIndex = 15;
             this.b16.UseVisualStyleBackColor = true;
+            this.b16.Click += new System.EventHandler(this.b16_Click);
+            // 
+            // resetBtn
+            // 
+            this.resetBtn.BackColor = System.Drawing.Color.Red;
+            this.resetBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resetBtn.Location = new System.Drawing.Point(338, 13);
+            this.resetBtn.Name = "resetBtn";
+            this.resetBtn.Size = new System.Drawing.Size(119, 33);
+            this.resetBtn.TabIndex = 32;
+            this.resetBtn.Text = "Reset";
+            this.resetBtn.UseVisualStyleBackColor = false;
+            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
+            // 
+            // cpScore
+            // 
+            this.cpScore.AutoSize = true;
+            this.cpScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpScore.Location = new System.Drawing.Point(338, 305);
+            this.cpScore.Name = "cpScore";
+            this.cpScore.Size = new System.Drawing.Size(124, 24);
+            this.cpScore.TabIndex = 31;
+            this.cpScore.Text = "Computer = 0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(338, 198);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 26);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "SCORE";
+            // 
+            // playerScore
+            // 
+            this.playerScore.AutoSize = true;
+            this.playerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerScore.Location = new System.Drawing.Point(339, 256);
+            this.playerScore.Name = "playerScore";
+            this.playerScore.Size = new System.Drawing.Size(123, 24);
+            this.playerScore.TabIndex = 29;
+            this.playerScore.Text = "Player       = 0";
             // 
             // Grid4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(350, 339);
+            this.ClientSize = new System.Drawing.Size(479, 339);
+            this.Controls.Add(this.resetBtn);
+            this.Controls.Add(this.cpScore);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.playerScore);
             this.Controls.Add(this.b16);
             this.Controls.Add(this.b15);
             this.Controls.Add(this.b14);
@@ -201,6 +269,7 @@
             this.Name = "Grid4";
             this.Text = "4X4 Grid";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -222,5 +291,9 @@
         private System.Windows.Forms.Button b14;
         private System.Windows.Forms.Button b15;
         private System.Windows.Forms.Button b16;
+        private System.Windows.Forms.Button resetBtn;
+        private System.Windows.Forms.Label cpScore;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label playerScore;
     }
 }
