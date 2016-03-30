@@ -1884,28 +1884,37 @@ namespace TicTacToe
         }// done v1
         private bool checkAICenter()
         {
-            if (b5.Text == "")
+            if (b13.Text == "")
             {
-                b5.PerformClick();
+                b13.PerformClick();
                 return true;
             }
             else
                 return false;
-        }
+        } // done v1
         private bool checkAICorner()
         {
-            if ((b1.Text == "X" && b9.Text == "X") || (b3.Text == "X" && b7.Text == "X"))
-                return false;
             if (b1.Text == "")
             {
                 b1.PerformClick();
                 return true;
             }
-            if (b3.Text == "")
+            if (b5.Text == "")
             {
-                b3.PerformClick();
+                b5.PerformClick();
                 return true;
             }
+            if (b21.Text == "")
+            {
+                b21.PerformClick();
+                return true;
+            }
+            if (b25.Text == "")
+            {
+                b25.PerformClick();
+                return true;
+            }
+            //inner corner
             if (b7.Text == "")
             {
                 b7.PerformClick();
@@ -1916,13 +1925,28 @@ namespace TicTacToe
                 b9.PerformClick();
                 return true;
             }
+            if (b17.Text == "")
+            {
+                b17.PerformClick();
+                return true;
+            }
+            if (b19.Text == "")
+            {
+                b19.PerformClick();
+                return true;
+            }
             return false;
-        }
+        } // done v1
         private bool choseRemaining()
         {
             if (b2.Text == "")
             {
                 b2.PerformClick();
+                return true;
+            }
+            if (b3.Text == "")
+            {
+                b3.PerformClick();
                 return true;
             }
             if (b4.Text == "")
@@ -1940,8 +1964,63 @@ namespace TicTacToe
                 b8.PerformClick();
                 return true;
             }
+            if (b10.Text == "")
+            {
+                b10.PerformClick();
+                return true;
+            }
+            if (b11.Text == "")
+            {
+                b11.PerformClick();
+                return true;
+            }
+            if (b12.Text == "")
+            {
+                b12.PerformClick();
+                return true;
+            }
+            if (b14.Text == "")
+            {
+                b14.PerformClick();
+                return true;
+            }
+            if (b15.Text == "")
+            {
+                b15.PerformClick();
+                return true;
+            }
+            if (b16.Text == "")
+            {
+                b16.PerformClick();
+                return true;
+            }
+            if (b18.Text == "")
+            {
+                b18.PerformClick();
+                return true;
+            }
+            if (b20.Text == "")
+            {
+                b20.PerformClick();
+                return true;
+            }
+            if (b22.Text == "")
+            {
+                b22.PerformClick();
+                return true;
+            }
+            if (b23.Text == "")
+            {
+                b23.PerformClick();
+                return true;
+            }
+            if (b24.Text == "")
+            {
+                b24.PerformClick();
+                return true;
+            }
             return false;
-        } 
+        }  // done v1
 
     }
 }
