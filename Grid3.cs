@@ -14,15 +14,15 @@ namespace TicTacToe
     {
         /*an integer to determine the players turn.
          * 1 correspons to 'X' and 0 to 'O'
-         *in this game 'X' alwasys starts first
+         *in this game 'X', the human player alwasys starts first
          */
         private int turn = 1;
+        
         //an integer for keeping track of number of turns
         private int noTurn = 0;
 
-        /*
-         *two integers for keeping track of number of wins  
-         */
+        //two integers for keeping track of number of wins of each player
+        //'player' is the human player variable and 'cp' is computer player
         private int player = 0;
         private int cp = 0;
 
@@ -30,7 +30,9 @@ namespace TicTacToe
         {
             InitializeComponent();
         }
-        // a method to change the players turn and count number of turns
+        /* a method to change the players turn
+         * and count the number of turns the game has been going on
+         */
         private void changeTurn()
         {
             noTurn++;
@@ -39,6 +41,8 @@ namespace TicTacToe
             else
                 turn = 1;
         }
+
+        // Grid Section
         private void b1_Click(object sender, EventArgs e)
         {
             if (turn == 1)
@@ -51,7 +55,6 @@ namespace TicTacToe
             checkWin();
             aiMove();
         }
-
         private void b2_Click(object sender, EventArgs e)
         {
             if (turn == 1)
@@ -64,7 +67,6 @@ namespace TicTacToe
             checkWin();
             aiMove();
         }
-
         private void b3_Click(object sender, EventArgs e)
         {
             if (turn == 1)
@@ -77,7 +79,6 @@ namespace TicTacToe
             checkWin();
             aiMove();
         }
-
         private void b4_Click(object sender, EventArgs e)
         {
             if (turn == 1)
@@ -90,7 +91,6 @@ namespace TicTacToe
             checkWin();
             aiMove();
         }
-
         private void b5_Click(object sender, EventArgs e)
         {
             if (turn == 1)
@@ -103,7 +103,6 @@ namespace TicTacToe
             checkWin();
             aiMove();
         }
-
         private void b6_Click(object sender, EventArgs e)
         {
             if (turn == 1)
@@ -116,7 +115,6 @@ namespace TicTacToe
             checkWin();
             aiMove();
         }
-
         private void b7_Click(object sender, EventArgs e)
         {
             if (turn == 1)
@@ -129,7 +127,6 @@ namespace TicTacToe
             checkWin();
             aiMove();
         }
-
         private void b8_Click(object sender, EventArgs e)
         {
             if (turn == 1)
@@ -142,7 +139,6 @@ namespace TicTacToe
             checkWin();
             aiMove();
         }
-
         private void b9_Click(object sender, EventArgs e)
         {
             if (turn == 1)
@@ -156,7 +152,8 @@ namespace TicTacToe
             checkWin();
             aiMove();
         }
-        //a method to reset game and scorings
+
+        //a method to reset game and scorings back to original states
         private void resetBtn_Click(object sender, EventArgs e)
         {
             clearGame();
@@ -166,7 +163,7 @@ namespace TicTacToe
             cpScore.Text = "Computer = " + cp;
 
         }
-        //a method to check if the game has ended 
+        //a method to check if the game has ended/a player has won
         private void checkWin()
         {
             if (b1.Text != "" && b2.Text != "" && b3.Text != "")
@@ -379,7 +376,7 @@ namespace TicTacToe
              }
 
         }
-        // a method to clear the game after a player has won
+        // a method to clear the grid after a player has won or a draw
         private void clearGame()
         {
             //reset turn back to 1 so 'X' always starts
@@ -434,17 +431,21 @@ namespace TicTacToe
             b8.Enabled = true;
             b9.Enabled = true;
         }
+        
         //AI Section
         /* 
          * AI Logic: 
          * First move to check if the ai can win
          * Second move if the ai can lose (to prevent it)
-         * If there is a configuration where the opponent can fork, you must block that fork
-         * (the ai cant create a fork itself because he does not have the first move)
+         * If there is a configuration where the opponent can fork
+         * (forking is where a player has two options two win), you must block that fork
+         * the ai cant create a fork itself because he does not have the first move
+         * (ai can create a fork if the player make a mistake but this step is not implemented and can be added later on)
          * play the center if open.
          * Else take corner
-         * play in a middle square on any of the 4 sides
+         * play in a remainder square. 
          */
+        // executes ai logic a the sequence describe
         private void aiMove()
         {
             if (turn != 1)
@@ -455,13 +456,15 @@ namespace TicTacToe
                     {
                             if (checkAICenter() == false)
                             {
-                                if (checkAICorner() == false)
+                                if (checkFork() == false)
                                     choseRemaining();
                             }
                     }
                 }
             }
         }
+        //check if the ai can win the game in the next move
+        //this method checks all the possible combination where the ai can win
         private bool checkAIWin()
         {
             //section 1.1
@@ -668,6 +671,8 @@ namespace TicTacToe
             return false;
             
         }
+        //check if the ai can lose the game in the next move
+        //this method checks all the possible combination where the ai can lose
         private bool checkAILose()
         {
 
@@ -877,6 +882,7 @@ namespace TicTacToe
 
             }
         }
+        //check the center. if the center is empty the ai takes it
         private bool checkAICenter()
         {
             if(b5.Text == "")
@@ -887,23 +893,40 @@ namespace TicTacToe
             else 
                 return false;
         }
-        private bool checkAICorner()
+        //check for possible forks
+        private bool checkFork()
         {
-            // Blocking an opponent's fork
-           
+            // chose a different field to prevent forks
             if ((b1.Text == "X" && b9.Text == "X") || (b3.Text == "X" && b7.Text == "X"))
                return false;
             if (b8.Text == "X" && b3.Text == "X" && noTurn == 3)
                 return false;
             if (b1.Text == "X" && b8.Text == "X" && noTurn == 3)
                 return false;
-            
+            //fork combinations
             if(b6.Text == "X" && b8.Text == "X" && noTurn == 3)
             {
                 b9.PerformClick();
                 return true;
             }
-            if(b1.Text == "")
+            //published fork changes
+            if (b8.Text == "X" && b3.Text == "X" && noTurn == 3)
+            {
+                b9.PerformClick();
+                return true;
+            }
+            if (b1.Text == "X" && b8.Text == "X" && noTurn == 3)
+            {
+                b7.PerformClick();
+                return true;
+            }
+            return false;
+        }
+        //chose the remaining fields
+        //the fields can be setup in a way that the ai goes for winning moves according to the human players move.
+        private bool choseRemaining()
+        {
+            if (b1.Text == "")
             {
                 b1.PerformClick();
                 return true;
@@ -923,20 +946,7 @@ namespace TicTacToe
                 b9.PerformClick();
                 return true;
             }
-            return false;
-        }
-        private bool choseRemaining()
-        {
-            if (b8.Text == "X" && b3.Text == "X" && noTurn == 3)
-            {
-                b9.PerformClick();
-                return true;
-            }
-            if (b1.Text == "X" && b8.Text == "X" && noTurn == 3)
-            {
-                b7.PerformClick();
-                return true;
-            }
+
             if (b2.Text == "")
             {
                 b2.PerformClick();
@@ -959,20 +969,5 @@ namespace TicTacToe
             }
             return false;
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void playerScore_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cpScore_Click(object sender, EventArgs e)
-        {
-
-        } 
     }
 }

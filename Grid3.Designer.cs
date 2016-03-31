@@ -143,7 +143,6 @@
             this.playerScore.Size = new System.Drawing.Size(123, 24);
             this.playerScore.TabIndex = 9;
             this.playerScore.Text = "Player       = 0";
-            this.playerScore.Click += new System.EventHandler(this.playerScore_Click);
             // 
             // label2
             // 
@@ -156,7 +155,6 @@
             this.label2.Size = new System.Drawing.Size(78, 26);
             this.label2.TabIndex = 10;
             this.label2.Text = "SCORE";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // cpScore
             // 
@@ -167,7 +165,6 @@
             this.cpScore.Size = new System.Drawing.Size(124, 24);
             this.cpScore.TabIndex = 11;
             this.cpScore.Text = "Computer = 0";
-            this.cpScore.Click += new System.EventHandler(this.cpScore_Click);
             // 
             // resetBtn
             // 
