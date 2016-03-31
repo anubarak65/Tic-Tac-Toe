@@ -1899,6 +1899,57 @@ namespace TicTacToe
         } // done v1
         private bool checkAICorner()
         {
+            //fork
+            if (b13.Text == "X" && b8.Text == "X" && b3.Text == "X" && b17.Text == "X" && b16.Text == "X" && b19.Text == "X" && b18.Text == "")
+            {
+                b18.PerformClick();
+                return true;
+            }
+            if (b13.Text == "X" && b8.Text == "X" && b3.Text == "X" && b22.Text == "X" && b21.Text == "X" && b25.Text == "X" && b23.Text == "")
+            {
+                b23.PerformClick();
+                return true;
+            }
+            if (b13.Text == "X" && b8.Text == "X" && b3.Text == "X" && b17.Text == "X" && b21.Text == "X" && b19.Text == "X" && b25.Text == "X" && (b24.Text == "X" || b22.Text == "X") && b23.Text == "")
+            {
+                b23.PerformClick();
+                return true;
+            }
+            if (b13.Text == "X" && b12.Text == "X" && b11.Text == "X" && (b10.Text == "X" || b20.Text == "X") && b5.Text == "X" && b25.Text == "X" && b15.Text == "")
+            {
+                b15.PerformClick();
+                return true;
+            }
+            if (b19.Text == "X" && b18.Text == "X" && b17.Text == "X" && (b10.Text == "X" || b15.Text == "X") && b25.Text == "X" && b5.Text == "X" && b20.Text == "")
+            {
+                b20.PerformClick();
+                return true;
+            }
+            if (b1.Text == "X" && b6.Text == "X" && b11.Text == "X" && b23.Text == "X" && b23.Text == "X" && b25.Text == "X" && b21.Text == "")
+            {
+                b21.PerformClick();
+                return true;
+            }
+            if (b2.Text == "X" && b7.Text == "X" && b17.Text == "X" && b21.Text == "X" && b24.Text == "X" && b25.Text == "X" && b22.Text == "")
+            {
+                b22.PerformClick();
+                return true;
+            }
+            if (b4.Text == "X" && b9.Text == "X" && b19.Text == "X" && b21.Text == "X" && b22.Text == "X" && b25.Text == "X" && b24.Text == "")
+            {
+                b24.PerformClick();
+                return true;
+            }
+            if (b5.Text == "X" && b10.Text == "X" && b25.Text == "X" && b19.Text == "X" && b17.Text == "X" && b16.Text == "X" && b20.Text == "")
+            {
+                b20.PerformClick();
+                return true;
+            }
+            if (b5.Text == "X" && b25.Text == "X" && (b20.Text == "X" || b15.Text == "X") && b9.Text == "X" && b7.Text == "X" && b6.Text == "X" && b10.Text == "")
+            {
+                b10.PerformClick();
+                return true;
+            }
                 if (b1.Text == "")
                 {
                     b1.PerformClick();

@@ -1321,6 +1321,27 @@ namespace TicTacToe
         }// done v1
         private bool checkAICenter()
         {
+            //prevent fork
+            if(b11.Text == "X" && b10.Text == "X" && (b8.Text == "X" || b16.Text == "X") && b4.Text == "X" && b12.Text == "")
+            {
+                b12.PerformClick();
+                return true;
+            }
+            if (b7.Text == "X" && b11.Text == "X" && (b14.Text == "X" || b16.Text == "X") && b13.Text == "X" && b15.Text == "")
+            {
+                b15.PerformClick();
+                return true;
+            }
+            if (b6.Text == "X" && b10.Text == "X" && (b13.Text == "X" || b15.Text == "X") && b16.Text == "X" && b14.Text == "")
+            {
+                b14.PerformClick();
+                return true;
+            }
+            if (b6.Text == "X" && b7.Text == "X" && b16.Text == "X" && b4.Text == "X" && b8.Text == "")
+            {
+                b8.PerformClick();
+                return true;
+            }
             if (b6.Text == "")
             {
                 b6.PerformClick();

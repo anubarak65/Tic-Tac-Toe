@@ -517,7 +517,7 @@ namespace TicTacToe
             //section 3.1
             if (b7.Text == b8.Text && b9.Text == "")
             {
-                if (b6.Text == "O")
+                if (b7.Text == "O")
                 {
                     b9.PerformClick();
                     return true;
@@ -890,13 +890,14 @@ namespace TicTacToe
         private bool checkAICorner()
         {
             // Blocking an opponent's fork
+           
             if ((b1.Text == "X" && b9.Text == "X") || (b3.Text == "X" && b7.Text == "X"))
                return false;
             if (b8.Text == "X" && b3.Text == "X" && noTurn == 3)
                 return false;
             if (b1.Text == "X" && b8.Text == "X" && noTurn == 3)
                 return false;
-
+            
             if(b6.Text == "X" && b8.Text == "X" && noTurn == 3)
             {
                 b9.PerformClick();
